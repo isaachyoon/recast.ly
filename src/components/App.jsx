@@ -2,19 +2,18 @@ class App extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      isToggleOn: true,
-      videos: this.props.videos
+      videos: this.props.videos, 
+      initialVideo: this.props.videos[0]
 
     };
     this.isClicked = this.isClicked.bind(this);
-
   }
 
-  isClicked() {
-    console.log('clicked');
+  isClicked(event) {
     this.setState({
-      isToggleOn: !(this.state.isToggleOn)
+      initialVideo: event
     });
+    
   }
 
   render () {
@@ -22,7 +21,7 @@ class App extends React.Component {
       <div>
       <Nav />
         <div className="col-md-7">
-         <VideoPlayer video={this.state.videos[0]}/>
+         <VideoPlayer video={this.state.initialVideo}/>
         </div>
         <div className="col-md-5">
           <VideoList videos={this.state.videos} click={this.isClicked}/>

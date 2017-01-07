@@ -1,6 +1,7 @@
 var VideoPlayer = (props) => {
-  console.log('print', props);
+  
   //WHY DOES PROPS RECEIVE AN OBJECT RATHER THAN AN ARRAY
+
   return (
     <div className="video-player">
       <div className="embed-responsive embed-responsive-16by9">

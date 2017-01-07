@@ -1,10 +1,11 @@
 var VideoListEntry = (props) => {
   //console.log('console', props);
   // debugger
+  //console.log(props);
   return (
-  <div className="video-list-entry">
+  <div className="video-list-entry" videoid = {props.video.id} onClick={() => props.click(props.video)}>
     <div className="media-left media-middle">
-      <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" onClick={(e) => props.click(e)} />
+      <img className="media-object" src={props.video.snippet.thumbnails.default.url} videoid = {props.video.id} alt="" />
     </div>
     <div className="media-body">
       <div className="video-list-entry-title">{props.video.snippet.title}</div>
