@@ -1,7 +1,10 @@
-var App = () => (
+var App = (props) => (
+
   <div>
+    
     <Nav />
     <div className="col-md-7">
+      <p> hello </p>
       <VideoPlayer/>
     </div>
     <div className="col-md-5">
