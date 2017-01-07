@@ -1,8 +1,9 @@
 var VideoList = (props) => (
   <div className="video-list media">
   {props.videos.map((video) => 
-    <VideoListEntry video={video} />
+    <VideoListEntry video={video} click={props.click} />
   )}
+
   
   
   </div>
@@ -18,3 +19,6 @@ VideoList.propTypes = {
 // `var` declarations will only exist globally where explicitly defined.
 window.VideoList = VideoList;
 //export default VideoList;
+
+//seperating this won't work because each video has its own click handler.
+  //<VideoListEntry click={props.click} />
