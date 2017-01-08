@@ -46,7 +46,7 @@ describe('App', function() {
     });
   });
 
-  xdescribe('when rendering live data from YouTube', function() {
+  describe('when rendering live data from YouTube', function() {
     var searchYouTubeStub;
 
     beforeEach(function() {
@@ -57,11 +57,11 @@ describe('App', function() {
       );
     });
 
-    it('should call `searchYouTube` when app is initialized', function() {
+    xit('should call `searchYouTube` when app is initialized', function() {
       expect(searchYouTubeStub.called).to.be.true;
     });
 
-    it('should load live data when app is initialized', function() {
+    xit('should load live data when app is initialized', function() {
       expect(searchYouTubeStub.called).to.be.true;
 
       var videoEntryTitleElements = scryRenderedDOMComponentsWithClass(app, 'video-list-entry-title');
